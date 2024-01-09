@@ -17,7 +17,7 @@ pip install -r requirements.txt
 Make sure you install `ffmpeg`.
 
 ### Compiling whisper.cpp
-You can follow the instructions for the main example on the (whisper.cpp repo)[https://github.com/ggerganov/whisper.cpp#quick-start].
+You can follow the instructions for the main example of the [whisper.cpp repository](https://github.com/ggerganov/whisper.cpp#quick-start).
 
 Download the `tiny.en` model
 ```
