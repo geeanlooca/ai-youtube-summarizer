@@ -10,7 +10,12 @@ At the moment, `yt-dlp` is used to download the subtitles and audio track of You
 You'll probably need to have `ffmpeg` installed, along with a C compiler for compiling `whisper.cpp`, and optionally OpenBLAS.
 
 ## How to run it
-Clone the repository and install the required python packages
+Clone the repository and its submodule
+```bash
+git clone --recurse-submodules https://github.com/geeanlooca/ai-youtube-summarizer
+```
+
+and install the required python packages
 ```bash
 pip install -r requirements.txt
 ```
@@ -19,13 +24,13 @@ Make sure you install `ffmpeg`.
 ### Compiling whisper.cpp
 You can follow the instructions for the main example of the [whisper.cpp repository](https://github.com/ggerganov/whisper.cpp#quick-start).
 
-Download the `tiny.en` model
+`cd` in in the `whisper.cpp` directory, download the `tiny.en` model
 ```
 bash ./models/download-ggml-model.sh base.en
 ```
 and build the example program using `make`.
 
-You can specify the path of the binary executable and the model in the source code of the `trascribe.py` file.
+You can specify the path of the compiled executable and the model in the source code of the `trascribe.py` file.
 
 ### OpenAI API key
 You need to supply your own OpenAI API key. Just create a `.env` file specifying the `OPENAI_API_KEY` environmental variable:
